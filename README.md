@@ -6,7 +6,7 @@
 **antibreakspawner** เป็น plugin สำหรับ Minecraft ที่จะทำให้ผู้เล่นไม่สามารถทุบ Spawner ได้ หากไม่มี permission ที่ถูกต้อง
 
 **รองรับเวอร์ชั่น:** 1.21+  
-**สร้างโดย:** meo [meo.pp.ua]
+**สร้างโดย:** [meo](http://meo.pp.ua)
 
 ### คำสั่ง:
 - `/antibreakspawner reload` - ใช้สำหรับ reload plugin
@@ -23,7 +23,7 @@
 The **antibreakspawner** plugin ensures that players cannot break Spawners unless they have the proper permission.
 
 **Supported Versions:** 1.21+  
-**Created by:** meo [meo.pp.ua]
+**Created by:** [meo](http://meo.pp.ua)
 
 ### Commands:
 - `/antibreakspawner reload` - Reload the plugin

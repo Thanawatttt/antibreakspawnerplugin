@@ -5,6 +5,9 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: write # ให้สิทธิ์ในการสร้าง release
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,22 +30,12 @@ jobs:
       run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
 
     - name: Create Release
-      id: create_release
-      uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: softprops/action-gh-release@v1
       with:
+        files: target/*.jar
         tag_name: release-${{ steps.date.outputs.date }}
-        release_name: Release ${{ steps.date.outputs.date }}
+        name: Release ${{ steps.date.outputs.date }}
         draft: false
         prerelease: false
-
-    - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./target/*.jar
-        asset_name: plugin-${{ steps.date.outputs.date }}.jar
-        asset_content_type: application/java-archive

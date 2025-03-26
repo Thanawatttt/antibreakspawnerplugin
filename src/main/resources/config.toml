@@ -1,0 +1,8 @@
+# AntiCageBreak Configuration
+
+[settings] #ตั้งค่าว่าจะให้ผู้เล่นสามารถขุดได้โดยที่ไม่ต้องมี permission bypass หรือไม่
+break_spawner = false
+
+[messages]
+title = "§c§lไม่สามารถทุบได้" #ข้อความที่แสดงที่ title ตอนที่ผู้เล่นที่ไม่มี permission bypass ขุด Spawner
+subtitle = "§7คุณไม่มีสิทธิ์ในการทำลาย Spawner" #ข้อความที่แสดงที่ actionbar ตอนที่ผู้เล่นไม่มี permission bypass ขุด Spawner

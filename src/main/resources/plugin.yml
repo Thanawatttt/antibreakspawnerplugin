@@ -1,0 +1,15 @@
+name: AntiBreakSpawner
+version: '1.0-SNAPSHOT'
+main: com.meo.plugin.App
+api-version: '1.21'
+commands:
+  antibreakspawner:
+    description: คำสั่ง reload plugin
+    usage: /<command> reload
+permissions:
+  antibreakspawner.admin:
+    description: perssion ในการเข้าถึงสิทธิ์ต่างๆ (สำหรับแอดมิน)
+    default: op
+  antibreakspawner.bypass.break:
+    description: อนุญาติให้คนที่มี permission นี้ขุด spawner ได้
+    default: false
